@@ -20,7 +20,7 @@ workflows:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
         
-       say-hello:
+      - say-hello:
           # Specify the execution environment.
           # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
           docker:
@@ -34,7 +34,4 @@ workflows:
                 command: "echo Hello, World!" 
                 # Invoke jobs via workflows
                 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-    say-hello-workflow:
-    jobs:
-      - say-hello
  
