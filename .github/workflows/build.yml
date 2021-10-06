@@ -9,6 +9,6 @@ jobs:
     - id: Build-Vue
       uses: xRealNeon/VuePagesAction@1.0.0
       with:
-        username: 'thuongtruong1009'
+        username: 'font-end-pro'
         reponame: 'searching-github-user'
         token: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
