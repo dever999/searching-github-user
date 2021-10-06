@@ -19,23 +19,22 @@ workflows:
           version: '16.10'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
-
-jobs:
-  say-hello:
-    # Specify the execution environment.
-    # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
-    docker:
-      - image: cimg/base:stable
-    # Add steps to the job
-    # See: https://circleci.com/docs/2.0/configuration-reference/#steps
-    steps:
-      - checkout
-      - run:
-          name: "Say hello"
-          command: "echo Hello, World!"
-# Invoke jobs via workflows
-# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
-workflows:
-  say-hello-workflow:
+        
+       say-hello:
+          # Specify the execution environment.
+          # See: https://circleci.com/docs/2.0/configuration-reference/#docker-machine-macos-windows-executor
+          docker:
+            - image: cimg/base:stable
+          # Add steps to the job
+          # See: https://circleci.com/docs/2.0/configuration-reference/#steps
+          steps:
+            - checkout
+            - run:
+                name: "Say hello"
+                command: "echo Hello, World!" 
+                # Invoke jobs via workflows
+                # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+    say-hello-workflow:
     jobs:
       - say-hello
+ 
